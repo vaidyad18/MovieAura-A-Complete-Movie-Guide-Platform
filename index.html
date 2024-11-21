@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieAura - A Complete Movie Guide Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon"
+        href="https://images.vexels.com/content/220696/preview/3d-movie-glasses-flat-icon-ca48b8.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <img src="3d-movie-glasses-flat-icon-ca48b8.webp" alt="">
+                <div class="webname">
+                    <p class="name">MovieAura</p>
+                    <p class="info">A Complete Movie Guide Platform</p>
+                </div>
+            </div>
+
+            <div class="searchbar">
+                <button><i class="fa-solid fa-magnifying-glass" style="color: #ebebeb;"></i></button>
+                <input type="text" class="search" name="" id="" placeholder="Enter Movie Name">
+            </div>
+        </nav>
+
+        <main>
+            <div class="sorry hide">
+                <img src="sorry.png" alt="" class=" empty">
+                <p class=" empty">Sorry, No such movie found :(</p>
+            </div>
+
+            <div class="loader hide"></div>
+
+            <div class="homescreen">
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide">
+                            <img class="first" src="landscapeposter.jpg" alt="Image 1">
+                        </div>
+                        <div class="slide">
+                            <img class="second" src="landscapeoster2.jpg" alt="Image 2">
+                        </div>
+                        <div class="slide">
+                            <img class="third" src="landscapeposter3.jpg" alt="Image 3">
+                        </div>
+                        <div class="slide">
+                            <img class="fourth" src="landscapeposter4.jpg" alt="Image 4">
+                        </div>
+                        <div class="slide">
+                            <img class="fifth" src="landscapeposter5.webp" alt="Image 5">
+                        </div>
+                        <div class="slide">
+                            <img class="sixth" src="landscapeposter6.jpg" alt="Image 6">
+                        </div>
+                        <div class="slide">
+                            <img class="seventh" src="landscapeposter7.webp" alt="Image 7">
+                        </div>
+                        <div class="slide">
+                            <img class="eigth" src="landscapeposter8.jpg" alt="Image 8">
+                        </div>
+                        <div class="slide">
+                            <img class="nine" src="landscapeposter9.avif" alt="Image 9">
+                        </div>
+                        <div class="slide">
+                            <img class="ten" src="landscapeposter10.jpg" alt="Image 10">
+                        </div>
+
+                    </div>
+
+                    <!-- Navigation Arrows -->
+                </div>
+                <div class="navigation">
+                    <button class="prev" onclick="prevSlide()">&#10094;</button>
+                    <button class="next" onclick="nextSlide()">&#10095;</button>
+                </div>
+            </div>
+
+
+            <div class="moviedata hide">
+                <div class="moviebanner">
+                    <img src="" alt="" class="poster">
+                    <div class="moviecontent">
+                        <p class="moviename"></p>
+                        <div class="rating">
+                            <i class="fa-solid fa-star" style="color: #fca211;"></i>
+                            <p></p>
+                        </div>
+                        <div class="movieinfo">
+                            <p class="pg"></p>
+                            <p class="year"></p>
+                            <p class="duration"></p>
+                        </div>
+                        <div class="genres">
+                            <p class="genre genre1">Action</p>
+                            <p class="genre genre2">Drama</p>
+                            <p class="genre genre3">Comedy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plot">
+                    <p class="head">Plot : </p>
+                    <p class="plotinfo"></p>
+                </div>
+
+                <div class="cast">
+                    <p class="head">Cast : </p>
+                    <p class="castinfo"></p>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

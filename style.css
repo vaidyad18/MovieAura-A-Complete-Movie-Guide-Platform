@@ -1,0 +1,531 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  height: 100vh;
+  width: 1060px;
+  position: relative;
+  background-color: #151515;
+}
+
+nav {
+  background-color: #fca211;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  height: 90px;
+  z-index: 9000;
+}
+
+.logo img {
+  width: 100px;
+  margin-left: 20px;
+}
+
+.logo img:hover {
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 630px) {
+  .logo img {
+    width: 70px;
+  }
+  nav {
+    height: 70px;
+  }
+}
+
+.webname {
+  margin-left: 10px;
+}
+
+.webname .name {
+  font-size: 39px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
+  color: rgb(37, 37, 37);
+}
+
+.webname .info {
+  font-size: 13px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  position: relative;
+}
+
+button {
+  position: absolute;
+  right: 20px;
+  font-size: 1.4rem;
+  outline: none;
+  border: none;
+  background-color: rgb(255, 167, 67);
+  padding: 12px;
+  transition: all 0.15s ease-in;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(255, 147, 23);
+}
+
+.search {
+  padding: 15px 25px;
+  outline: none;
+  border: 3px solid rgb(255, 194, 120);
+  background-color: rgb(255, 167, 67);
+  width: 450px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  color: white;
+  text-transform: capitalize;
+  transition: all 0.15s ease-in;
+}
+
+.search:hover{
+    background-color: rgb(255, 147, 23);
+}
+
+@media screen and (max-width: 860px) {
+  .search {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .search {
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .webname .name {
+    font-size: 30px;
+  }
+  .webname .info {
+    font-size: 10px;
+  }
+  .search {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+  button {
+    padding: 6px;
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .webname .name {
+    font-size: 20px;
+  }
+  .webname .info {
+    font-size: 8px;
+  }
+  .search {
+    width: 180px;
+    padding: 5px 20px;
+    font-size: 0.7rem;
+  }
+  nav {
+    height: 50px;
+  }
+  .logo img {
+    width: 50px;
+  }
+  button {
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+}
+
+.search::placeholder {
+  color: rgb(231, 231, 231);
+}
+
+.hide {
+  display: none !important;
+}
+
+.sorry {
+  height: 450px;
+}
+
+p.empty {
+  text-align: center;
+  color: rgb(152, 152, 152);
+  font-size: 1.5rem;
+  font-family: "Roboto Slab";
+}
+
+img.empty {
+  width: 400px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 87%;
+  
+  position: relative;
+}
+
+.moviedata {
+  border: 2px rgb(76, 76, 76) solid;
+  padding: 30px;
+  max-width: 533px;
+}
+
+.moviebanner {
+  display: flex;
+  color: white;
+  font-family: "Roboto Slab", serif;
+}
+
+.moviecontent {
+  padding-left: 20px;
+  margin-top: 60px;
+}
+
+.moviebanner img {
+  width: 180px;
+  transition: all 0.1s;
+}
+
+.moviebanner img:hover {
+  width: 190px;
+  margin: -6px;
+  margin-right: -4px;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  gap: 5px;
+}
+
+.movieinfo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  gap: 20px;
+  font-size: 0.9rem;
+  color: rgb(176, 176, 176);
+}
+
+.genres {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 0.9rem;
+}
+
+.moviename {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.genre {
+  border: 1px solid white;
+  padding: 2px 15px;
+  border-radius: 5px;
+}
+
+.plot,
+.cast {
+  color: white;
+  margin-top: 20px;
+  font-family: "Roboto Slab";
+}
+
+.plotinfo,
+.castinfo {
+  font-size: 0.8rem;
+  color: rgb(187, 187, 187);
+}
+
+.plot .head,
+.cast .head {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 550px) {
+  .moviedata {
+    max-width: 425px;
+    padding: 10px;
+  }
+  .moviebanner img {
+    width: 160px;
+  }
+  .genres {
+    gap: 8px;
+    font-size: 0.7rem;
+  }
+  .genre {
+    padding: 2px 9px;
+  }
+  .movieinfo {
+    font-size: 0.65rem;
+    gap: 15px;
+  }
+  .rating {
+    font-size: 0.7rem;
+  }
+  .moviename {
+    font-size: 1.2rem;
+  }
+  .plotinfo,
+  .castinfo {
+    font-size: 0.6rem;
+  }
+  .plot .head,
+  .cast .head {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .moviedata {
+    max-width: 370px;
+  }
+  .moviebanner img {
+    width: 140px;
+    height: 210px;
+  }
+  .genres {
+    gap: 6px;
+    font-size: 0.65rem;
+    margin-bottom: 0px;
+  }
+  .genre {
+    padding: 2px 9px;
+  }
+  .movieinfo {
+    font-size: 0.8rem;
+    gap: 15px;
+  }
+  .rating {
+    font-size: 0.9rem;
+  }
+  .moviename {
+    font-size: 1.4rem;
+  }
+  .plotinfo,
+  .castinfo {
+    font-size: 0.7rem;
+  }
+  .plot .head,
+  .cast .head {
+    font-size: 0.9rem;
+  }
+  .moviecontent {
+    margin-top: 45px;
+  }
+  .search {
+    width: 150px;
+  }
+}
+
+.loader {
+  border: 10px solid #363636;
+  border-top: 10px solid #fca311;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  animation: spin 0.7s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.homescreen {
+  display: flex;
+  justify-content: center;
+}
+
+.slider {
+  width: 900px;
+
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  width: 1000%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+}
+
+.slide:hover {
+  cursor: pointer;
+}
+
+.slide img {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.navigation {
+  position: relative;
+  z-index: 1000;
+}
+
+.next {
+  background-color: rgba(117, 117, 117, 0.6);
+  position: absolute;
+  top: 210px;
+  right: -46px;
+  border: none;
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 7px;
+}
+
+.prev {
+  margin-right: 914px;
+  background-color: rgba(117, 117, 117, 0.6);
+  top: 210px;
+  right: -3px;
+  position: absolute;
+  border: none;
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 7px;
+}
+
+.navigation button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 1060px) {
+  .slider {
+    width: 800px;
+  }
+  .prev{
+    right: -104px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .slider {
+    width: 700px;
+}
+.slide img{
+      height: 400px;
+
+  }
+  .prev{
+    right: -204px;
+    top:180px ;
+  }
+  .next{
+    top:180px ;
+  }
+}
+
+@media screen and (max-width: 830px) {
+    .slider {
+      width: 500px;
+  }
+  .slide img{
+        height: 300px;
+  
+    }
+    .prev{
+      right: -404px;
+      top:130px ;
+    }
+    .next{
+      top:130px ;
+    }
+  }
+
+  @media screen and (max-width: 610px) {
+    .slider {
+      width: 350px;
+  }
+  .slide img{
+        height: 250px;
+  
+    }
+    .prev{
+      right: -557px;
+      top:100px ;
+      font-size: 25px;padding: 7px;
+    }
+    .next{
+      top:100px ;
+      font-size: 25px;padding: 7px;
+      right: -35px;
+    }
+  }
+
+  @media screen and (max-width: 460px) {
+    .slider {
+      width: 300px;
+  }
+  .slide img{
+        height: 200px;
+  
+    }
+    .prev{
+      right: -609px;
+      top:90px ;
+      padding: 5px;
+      font-size: 20px;
+    }
+    .next{
+      top:90px ;
+      padding: 5px;
+      font-size: 20px;
+      right: -27px;
+    }
+  }
+  
