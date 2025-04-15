@@ -8,7 +8,7 @@ const logo = document.querySelector(".logo img");
 
 async function getmovieinfo(movie) {
   const mykey = "6e3de0e4";
-  const url = `http://www.omdbapi.com/?apikey=${mykey}&t=${movie}`;
+  const url = `https://www.omdbapi.com/?apikey=${mykey}&t=${movie}`;
   const response = await fetch(url);
   const data = await response.json();
   console.log(data);
