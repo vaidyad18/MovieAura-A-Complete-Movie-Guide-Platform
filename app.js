@@ -49,6 +49,7 @@ function showmovie(data) {
   sorry.classList.add("hide");
   movieArea.classList.remove("hide");
   home.classList.add("hide");
+
   movieName.innerHTML = data.Title;
   rating.innerHTML = data.imdbRating;
   poster.src = data.Poster;
@@ -56,8 +57,20 @@ function showmovie(data) {
   plot.innerHTML = data.Plot;
   year.innerHTML = data.Year;
   duration.innerHTML = data.Runtime;
-  //genre1.innerHTML = data.Genre[0];
   pg.innerHTML = data.Rated;
+  const genres = data.Genre.split(", ");
+  if (genres.length == 1) {
+    genre1.innerHTML = genres[0] ;
+  }
+  if (genres.length == 2) {
+    genre1.innerHTML = genres[0] ;
+    genre2.innerHTML = genres[1] ;
+  }
+  if (genres.length == 3) {
+    genre1.innerHTML = genres[0] ;
+    genre2.innerHTML = genres[1] ;
+    genre3.innerHTML = genres[2] ;
+  }
 }
 
 searchbtn.addEventListener("click", () => {
